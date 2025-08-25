@@ -1,3 +1,13 @@
+// Smooth hover effect for project cards
+document.querySelectorAll(".project-card").forEach((card) => {
+  card.addEventListener("mouseenter", () => {
+    card.style.transition = "transform 0.3s ease";
+    card.style.transform = "translateY(-8px)";
+  });
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "translateY(0)";
+  });
+});
 /* toggle icon navbar  */
 
 let menuIcon = document.querySelector("#menu-icon");

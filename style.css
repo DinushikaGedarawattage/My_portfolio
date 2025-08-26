@@ -1,3 +1,85 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1d2a2f;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Section Title */
+.portfolio {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.portfolio .heading {
+  color: #f9a825;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+/* Project Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Project Card */
+.project-card {
+  background: #fff;
+  color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.project-content h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.project-content p {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #f9a825;
+  color: #1d2a2f;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ffcc00;
+  color: #000;
+}
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 * {
@@ -543,15 +625,16 @@ span {
 
 /* Timeline Section Styles */
 .timeline-section {
-  background: linear-gradient(90deg, #e0eafc 0%, #cfdef3 100%);
+  background: linear-gradient(90deg, #2962b3 0%, #191f36 100%);
   padding: 60px 0;
 }
 .timeline-title {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 3.5rem; /* Increased font size */
   color: #0077b6;
   margin-bottom: 40px;
   letter-spacing: 2px;
+  font-weight: 700;
 }
 .timeline {
   position: relative;
@@ -562,7 +645,7 @@ span {
   position: absolute;
   left: 50%;
   top: 0;
-  width: 4px;
+  width: 6px; /* Increased line thickness */
   height: 100%;
   background: #0077b6;
   transform: translateX(-50%);
@@ -571,7 +654,7 @@ span {
 .timeline-item {
   position: relative;
   width: 50%;
-  padding: 24px 40px;
+  padding: 32px 48px; /* Increased padding */
   box-sizing: border-box;
 }
 .timeline-item.left {
@@ -585,35 +668,40 @@ span {
 .timeline-dot {
   position: absolute;
   top: 32px;
-  width: 18px;
-  height: 18px;
+  width: 28px; /* Increased dot size */
+  height: 28px;
   background: #fff;
-  border: 4px solid #0077b6;
+  border: 6px solid #0077b6; /* Increased border thickness */
   border-radius: 50%;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem; /* Icon size if used inside dot */
 }
 .timeline-item.left .timeline-dot {
-  right: -9px;
+  right: -14px;
 }
 .timeline-item.right .timeline-dot {
-  left: -9px;
+  left: -14px;
 }
 .timeline-item .content {
   background: #fff;
-  padding: 24px 28px;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  padding: 32px 36px; /* Increased padding */
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.09);
   position: relative;
   z-index: 2;
 }
 .timeline-item h3 {
   color: #0077b6;
-  font-size: 1.5rem;
-  margin-bottom: 8px;
+  font-size: 2.2rem; /* Increased font size */
+  margin-bottom: 12px;
+  font-weight: 700;
 }
 .timeline-item p {
   color: #333;
-  font-size: 1.05rem;
+  font-size: 1.4rem; /* Increased font size */
 }
 @media (max-width: 900px) {
   .timeline {
@@ -621,7 +709,7 @@ span {
     padding: 0 8px;
   }
   .timeline-item {
-    padding: 16px 8px;
+    padding: 24px 8px;
   }
 }
 
@@ -634,12 +722,17 @@ span {
     left: 0 !important;
     text-align: left;
     margin-bottom: 32px;
+    padding: 24px 16px;
   }
   .timeline-line {
-    left: 24px;
+    left: 32px;
+    width: 6px;
   }
   .timeline-dot {
-    left: 8px !important;
+    left: 12px !important;
     right: auto !important;
+    width: 28px;
+    height: 28px;
+    font-size: 2.2rem;
   }
 }

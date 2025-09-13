@@ -15,7 +15,7 @@ body {
 .portfolio .heading {
   color: #f9a825;
   margin-bottom: 30px;
-  font-size: 2rem;
+  font-size: 5rem;
 }
 
 /* Project Grid */
@@ -593,6 +593,7 @@ span {
     margin-bottom: 3;
   }
 
+  /* Portfolio Section */
   .portfolio h2 {
     margin-bottom: 3rem;
   }
@@ -607,6 +608,19 @@ span {
     grid-template-columns: 1fr;
   }
 
+  .project-content h1 {
+    font-size: 2.1rem;
+  }
+
+  .project-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .project-content p {
+    font-size: 1.2rem;
+  }
+
+  /* home */
   .home-img img {
     width: 80vw;
     margin-top: 8rem;
@@ -852,12 +866,15 @@ span {
   overflow: hidden;
 }
 
+/* ...existing code... */
 .bar-fill {
-  height: 8px;
+  height: 100%;
+  background: linear-gradient(90deg, #59b2f4 0%, #f9a825 100%);
   border-radius: 8px;
-  background: linear-gradient(90deg, #00c6fb 0%, #005bea 100%);
-  transition: width 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  width: 0; /* Start at 0 for animation */
+  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
+/* ...existing code... */
 
 .skill-card.backend .bar-fill {
   background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);

@@ -87,3 +87,36 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// ...existing code...
+
+document.addEventListener("DOMContentLoaded", function () {
+  const skillSection = document.querySelector(".skills-section");
+  const bars = document.querySelectorAll(".bar-fill");
+  let animated = false;
+
+  function animateBars() {
+    if (animated) return;
+    const sectionPos = skillSection.getBoundingClientRect().top;
+    const screenPos = window.innerHeight / 1.2;
+    if (sectionPos < screenPos) {
+      bars.forEach((bar) => {
+        const targetWidth = bar.getAttribute("data-width");
+        if (targetWidth) {
+          bar.style.width = targetWidth + "%";
+        }
+      });
+      animated = true;
+    }
+  }
+
+  // Set all bars to 0 width initially
+  bars.forEach((bar) => {
+    bar.style.width = "0";
+  });
+
+  window.addEventListener("scroll", animateBars);
+  animateBars(); // In case already in view
+});
+
+// ...existing code...
